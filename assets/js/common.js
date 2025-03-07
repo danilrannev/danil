@@ -13,6 +13,19 @@
 	Preloader
 **/
     $(window).on('load', function () {
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // console.log("Dark mode is enabled");
+            $('body').removeClass('light-skin');
+            $('body').addClass('dark-skin');
+            $('.header .switcher-btn').addClass('active');
+        } else {
+            // console.log("Light mode is enabled");
+            $('body').removeClass('dark-skin');
+            $('body').addClass('light-skin');
+            $('.header .switcher-btn').removeClass('active');
+        }
+
         $('body').imagesLoaded({}, function () {
             var preload = $('.preloader');
             preload.addClass('loaded');

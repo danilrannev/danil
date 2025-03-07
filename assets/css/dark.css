@@ -20,6 +20,10 @@
 	color: rgba(255, 255, 255, 0.5);
 }
 
+.dark-skin .logo-text {
+	filter: brightness(0) invert(1);
+}
+
 body.dark-skin {
 	color: #eaeaea;
 }
